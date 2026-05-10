@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Tic Tac Toe</title>
+    <!-- Links to the external stylesheet for styling the game. -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Main container for the entire game interface. -->
     <div class="game-container">
+        <!-- Game title displayed at the top. -->
         <h1>Tic Tac Toe</h1>
+        <!-- Displays the current game status, such as whose turn it is or game results. -->
         <div id="status">Player X's Turn</div>
+        <!-- The Tic Tac Toe game board, containing 9 playable cells. -->
         <div class="board" id="board">
+            <!-- Each div represents a single cell on the game board. -->
+            <!-- The 'data-index' attribute helps JavaScript identify each cell uniquely. -->
             <div class="cell" data-index="0"></div>
             <div class="cell" data-index="1"></div>
             <div class="cell" data-index="2"></div>
@@ -20,8 +27,10 @@
             <div class="cell" data-index="7"></div>
             <div class="cell" data-index="8"></div>
         </div>
+        <!-- Button to reset the game to its initial state. -->
         <button id="reset">Reset Game</button>
     </div>
+    <!-- Links to the external JavaScript file containing game logic. -->
     <script src="script.js"></script>
 </body>
 </html>
