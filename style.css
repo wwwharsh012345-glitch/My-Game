@@ -1,54 +1,79 @@
+/*
+ * Styles for the main body of the application.
+ * Centers the game container vertically and horizontally on the screen.
+ */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f2f5;
-    font-family: 'Arial', sans-serif;
+    display: flex; /* Enables flexbox layout for aligning children */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Sets the body height to 100% of the viewport height */
+    background-color: #f0f2f5; /* Light gray background color */
+    font-family: 'Arial', sans-serif; /* Specifies the font family for the entire page */
 }
 
+/*
+ * Styles for the main game container.
+ * Centers its text content.
+ */
 .game-container {
-    text-align: center;
+    text-align: center; /* Centers text and inline-block elements within the container */
 }
 
+/*
+ * Styles for the game status display (e.g., "Player X's turn", "Draw", "Player O Wins!").
+ */
 #status {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
+    margin-bottom: 20px; /* Adds space below the status message */
+    font-size: 1.5rem; /* Sets the font size */
+    font-weight: bold; /* Makes the text bold */
+    color: #333; /* Dark gray text color */
 }
 
+/*
+ * Styles for the Tic-Tac-Toe game board.
+ * Uses CSS Grid to create a 3x3 layout.
+ */
 .board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 10px;
-    margin-bottom: 20px;
+    display: grid; /* Enables CSS Grid layout */
+    grid-template-columns: repeat(3, 100px); /* Creates 3 columns, each 100px wide */
+    grid-template-rows: repeat(3, 100px); /* Creates 3 rows, each 100px tall */
+    gap: 10px; /* Adds space between grid cells */
+    margin-bottom: 20px; /* Adds space below the board */
 }
 
+/*
+ * Styles for individual cells within the game board.
+ */
 .cell {
-    width: 100px;
-    height: 100px;
-    background-color: #fff;
-    border: 2px solid #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-    cursor: pointer;
-    transition: background 0.3s;
+    width: 100px; /* Sets the width of each cell */
+    height: 100px; /* Sets the height of each cell */
+    background-color: #fff; /* White background for cells */
+    border: 2px solid #333; /* Dark gray border around cells */
+    display: flex; /* Enables flexbox for centering content (X or O) inside the cell */
+    justify-content: center; /* Centers content horizontally within the cell */
+    align-items: center; /* Centers content vertically within the cell */
+    font-size: 2.5rem; /* Sets the font size for X or O marks */
+    cursor: pointer; /* Changes cursor to a pointer when hovering over a cell, indicating interactivity */
+    transition: background 0.3s; /* Smooth transition for background color changes on hover */
 }
 
+/*
+ * Hover effect for game cells.
+ * Changes background color when the mouse pointer is over a cell.
+ */
 .cell:hover {
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; /* Lighter gray background on hover */
 }
 
+/*
+ * Styles for the reset button.
+ */
 #reset {
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    padding: 10px 20px; /* Adds padding inside the button */
+    font-size: 1rem; /* Sets the font size for the button text */
+    cursor: pointer; /* Changes cursor to a pointer, indicating interactivity */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Adds rounded corners to the button */
 }
